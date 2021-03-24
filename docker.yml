@@ -1,0 +1,9 @@
+---
+- name: "Configuring Docker repository in Managed Node"
+  hosts: test
+  tasks:
+          - yum_repository:
+                  name: "DockerRepo"
+                  description: "Repository for configuring Docker Engine on Base OS"
+                  baseurl: https://download.docker.com/linux/centos/7/x86_64/stable/
+                  gpgcheck: no
